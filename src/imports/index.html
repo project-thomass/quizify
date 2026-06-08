@@ -96,7 +96,7 @@
             <h2 class="text-3xl font-extrabold text-slate-800 tracking-tight mb-2">Quizify Premium Hub</h2>
             <p class="text-sm text-slate-500 mb-6 leading-relaxed">Masukkan kode lisensi atau kode sub-domain ujian eksklusif Anda untuk mengaktifkan dasbor manajemen kuis.</p>
             <div class="space-y-3">
-                <input type="text" id="licenseInput" placeholder="Ketik Kode Ujian (Contoh: EMBEGE)" class="w-full px-5 py-3.5 border-2 border-slate-200 rounded-xl font-bold text-center uppercase tracking-wider outline-none focus:border-blue-500 transition-all bg-slate-50">
+                <input type="text" id="licenseInput" placeholder="Ketik Kode Ujian (Contoh: KELAS-12A)" class="w-full px-5 py-3.5 border-2 border-slate-200 rounded-xl font-bold text-center uppercase tracking-wider outline-none focus:border-blue-500 transition-all bg-slate-50">
                 <button onclick="verifyLicense()" class="w-full bg-blue-600 text-white font-bold py-3.5 rounded-xl hover:bg-blue-700 transition-all shadow-md shadow-blue-600/10 text-sm uppercase tracking-wider">Buka Dasbor Instruktur</button>
             </div>
             <p id="lockError" class="text-red-500 text-xs font-bold mt-3 hidden">⚠️ Silakan isi kode terlebih dahulu!</p>
@@ -369,28 +369,7 @@
             </div>
         </div>
     </div>
-    <footer class="w-full max-w-5xl mt-auto pt-10 pb-6">
-        <div class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
-            
-            <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-2xl overflow-hidden border-2 border-slate-50 shadow-sm flex-shrink-0 bg-blue-50 flex items-center justify-center">
-                    <img src="image_a4c746.jpg" alt="Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Geri+Maulana&background=eff6ff&color=3b82f6&bold=true&size=128';">
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold text-slate-800 tracking-tight">Geri Maulana</h3>
-                    <p class="text-xs font-semibold text-blue-600 tracking-wide uppercase mt-0.5">Education Management</p>
-                </div>
-            </div>
 
-            <div class="flex flex-col items-center md:items-end gap-3">
-                <a href="mailto:gerimaulana@student.uinjkt.ac.id" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-50 text-slate-700 hover:bg-blue-50 hover:text-blue-700 font-semibold text-sm transition-colors border border-slate-100 hover:border-blue-200">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    Hubungi via Email
-                </a>
-                <p class="text-[11px] font-medium text-slate-400">© 2026 Quizify Pro. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
     <script>
         (function() {
             // == 1. DATA STATE MANAGEMENT & MULTI-TENANT ROUTING ==
