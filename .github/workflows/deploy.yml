@@ -4,7 +4,6 @@ on:
   push:
     branches: "main"
 
-# Memberikan izin untuk menulis data ke GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -30,20 +29,20 @@ jobs:
           node-version: 20
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v4
         with:
-          version: 9 # Menyesuaikan dengan pnpm di laptop kamu
+          version: 9
 
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
+      - name: Build Project
         run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist" # Folder hasil build utama Vite
+          path: "./dist" # <--- Memastikan GitHub hanya mengambil isi folder dist hasil kompilasi
 
       - name: Deploy to GitHub Pages
         id: deployment
