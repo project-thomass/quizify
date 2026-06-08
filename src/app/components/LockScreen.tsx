@@ -131,6 +131,40 @@ export function LockScreen({ onUnlock }: LockScreenProps) {
           </div>
         </div>
       </main>
+
+      {/* Footer Section */}
+      <footer className="w-full max-w-7xl mx-auto px-6 pb-6 mt-auto">
+        <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 hover:border-white/20">
+          
+          {/* Brand / Logo Area */}
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-xl overflow-hidden border border-white/10 shadow-sm flex-shrink-0 bg-white/5 flex items-center justify-center">
+              <img 
+                src="image_a4c746.jpg" 
+                alt="Logo" 
+                className="w-full h-full object-cover" 
+                onError={(e) => { 
+                  e.currentTarget.onerror = null; 
+                  e.currentTarget.src = 'https://ui-avatars.com/api/?name=Geri+Maulana&background=0284c7&color=fff&bold=true&size=128'; 
+                }} 
+              />
+            </div>
+            <div className="text-center sm:text-left">
+              <h3 className="text-base font-bold text-white tracking-tight">Geri Maulana</h3>
+              <p className="text-xs font-semibold text-blue-400 uppercase tracking-wider mt-0.5">Education Management</p>
+            </div>
+          </div>
+
+          {/* Contact / Email Area */}
+          <div className="flex flex-col items-center sm:items-end gap-2">
+            <a href="mailto:gerimaulana@student.uinjkt.ac.id" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 text-white hover:bg-blue-600 font-semibold text-xs transition-all border border-white/5 hover:border-blue-500 shadow-md">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              Hubungi via Email
+            </a>
+            <p className="text-[10px] font-medium text-slate-500">© 2026 Quizify Pro. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
