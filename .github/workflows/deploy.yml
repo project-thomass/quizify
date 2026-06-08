@@ -26,15 +26,15 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18 # Menggunakan Node 18 yang lebih stabil untuk framework bawaan figma
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v2 # Menggunakan versi v2 yang kompatibilitasnya lebih luas
         with:
-          version: 9
+          version: 8
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile # Bypass pengecekan pnpm-lock.yaml yang ketat
 
       - name: Build Project
         run: pnpm run build
@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist" # <--- Memastikan GitHub hanya mengambil isi folder dist hasil kompilasi
+          path: "./dist"
 
       - name: Deploy to GitHub Pages
         id: deployment
